@@ -1,7 +1,8 @@
+Global:
 
-default config path: engine/Shopware/Configs/Default.php
-plugin requs: $this->assertRequiredPluginsPresent(array('plugin_id1','plugin_id2'))
-Events sind besser als Hooks
+	default config path: engine/Shopware/Configs/Default.php
+	plugin requs: $this->assertRequiredPluginsPresent(array('plugin_id1','plugin_id2'))
+	Events sind besser als Hooks
 
 usefull cionfig settings:
 
@@ -41,3 +42,12 @@ Notes:
 		?useNumberAsId=1&pretty=1 
 		updates sind incrementell
 		Bei eigenen Resourcen, den Shopware Pagintor verwenden anastatt des Doctrine Defaults (Fehlverhalten bei der Variantentiefe)
+
+	Backend & ExtJs:
+		Alle extJs Dateien, werden durch smarty geparsed!
+		Controller angaben, werden immer lowercase geschrieben.
+		In den JS files muss zwischen { und Zeichen immer ein Leerzeichen sein, sonst knallt es mit smarty
+		Smartyblöcke in der js Datei verwenden um das Js file erweiterbar zu halten
+		Icons in den Menü werden über die CSS Klassen gesteuert
+		Dropdowns müssen über eigene Stores erstellt werden, diese werden dann in der Felddefinition überschrieben
+		Die Shopware Basis BackendModules liegen unter themes/Backend/ExtJs/backend/base/application
