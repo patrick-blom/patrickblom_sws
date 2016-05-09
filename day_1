@@ -1,0 +1,20 @@
+
+default config path: engine/Shopware/Configs/Default.php
+plugin requs: $this->assertRequiredPluginsPresent(array('plugin_id1','plugin_id2'))
+
+
+usefull cionfig settings:
+
+'front' => array(
+        'noErrorHandler' => true,
+        'throwExceptions' => true,
+
+    ),
+    'template' => array(
+        'forceCompile' => true
+    );
+
+Notes: 
+	Plugins:
+		Wenn keine update function in der Bootstrap vorhanden ist wird automatisch die install methode gecalled
+
