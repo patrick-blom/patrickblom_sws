@@ -30,5 +30,14 @@ Notes:
 			NotifyUntil: informiert über daten und bricht bei !null return value den prozess ab
 			Filter: wird zur manipulation der Daten benutzt
 	Hooks:
-		Hooks bekommen als Event args den Typ Enlight_Hook_HookArgs 
+		Hooks bekommen als Event args den Typ Enlight_Hook_HookArgs
+		Scheinbar ist jede Klasse hoookable
+		Types:
+			before: wird zuvor ausgeführt
+			after: wird danach ausgeführt
+			replace: ersetzt eine ganze Methode
 
+	API:
+		?useNumberAsId=1&pretty=1 
+		updates sind incrementell
+		Bei eigenen Resourcen, den Shopware Pagintor verwenden anastatt des Doctrine Defaults (Fehlverhalten bei der Variantentiefe)
