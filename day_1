@@ -1,7 +1,7 @@
 
 default config path: engine/Shopware/Configs/Default.php
 plugin requs: $this->assertRequiredPluginsPresent(array('plugin_id1','plugin_id2'))
-
+Events sind besser als Hooks
 
 usefull cionfig settings:
 
@@ -17,4 +17,18 @@ usefull cionfig settings:
 Notes: 
 	Plugins:
 		Wenn keine update function in der Bootstrap vorhanden ist wird automatisch die install methode gecalled
+		Tempalte Vars können über ->View()->assign('foo','bar') oder magic setter zugewiesen werdeb ->View()->foo = bar
+		Vor dem call der Action wird preDispatch ausgeführt
+		Nach dem call der Action wird die postDispatch ausgeführt
+		Module in Shopware sind die Controllertypen (API, Frontend, Backend, Widget)
+
+	Events:
+		subscribeEvent(Event, Callback, position)  // zuerst negativer Wert // zuletzt positiver Wert
+		Der wiki Eintrag zu den Events wird nicht mehr gepflegt!
+		Types:
+			Notify: rein informativ
+			NotifyUntil: informiert über daten und bricht bei !null return value den prozess ab
+			Filter: wird zur manipulation der Daten benutzt
+	Hooks:
+		Hooks bekommen als Event args den Typ Enlight_Hook_HookArgs 
 
