@@ -1,0 +1,14 @@
+Notes:
+	Doctrine:
+		Shopware nutzt die Annotations für ORM Models und Assertions
+		Repositories werden über Shopware()->Models()->getRepository('/foo/bar/bums') geholt
+		Für Limiting den Doctrine Paginator nutzen
+		Der einityManager wird über Shopware()->Models() geholt
+		Table update immer im Save Mode $tool->updateSchema($classes,true);
+		QueryBuilder sind in Shopware meistens public damit mann die Hooken kann
+		Erweiterungen am QueryBuilder mit addSelect holen
+	
+	Tipps:
+		Um zu verhindern, das Shopware in einem Modul ein Template erstellt gibt es folgendes "Feature"
+		public function preDispatch(){ $this->View()->loadTemplate(''); } setzt das Template auf einen leeren String
+	
