@@ -7,6 +7,18 @@ Notes:
 		Table update immer im Save Mode $tool->updateSchema($classes,true);
 		QueryBuilder sind in Shopware meistens public damit mann die Hooken kann
 		Erweiterungen am QueryBuilder mit addSelect holen
+		Paginator:
+			$paginator = $this->getQueryPaginator($builder);
+		        $data = $paginator->getIterator()->getArrayCopy();
+		        $count = $paginator->count();
+
+
+	Backend & ExtJs:
+		Ordner weden immer klein geschirebn und DateiNamen immer FCUp
+		Stores verbinden Backendcobtroller und Model
+		Das Grid definert das Windows für details 
+		Das Model definert, wie die Felder in dem Detail window aussehen soll
+		{s wird von smarty geparsed { s nicht
 	
 	Tipps:
 		Um zu verhindern, das Shopware in einem Modul ein Template erstellt gibt es folgendes "Feature"
