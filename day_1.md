@@ -48,8 +48,8 @@
 * Hooks got always an argument from type Enlight_Hook_HookArgs
 * Every Class is hookable
 * Shopware knows the following hook types
-  * before: will be call before the execution of a method
-  * after: will be call after the execution of a method
+  * before: will be called before the execution of a method
+  * after: will be called after the execution of a method
   * replace: will replace the entire method
 
 ##API
